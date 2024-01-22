@@ -7,7 +7,7 @@ COOKIES_ENABLED = False
 TELNETCONSOLE_ENABLED = False
 LOG_LEVEL = 'ERROR'
 # 访问完一个页面再访问下一个时需要等待的时间，默认为10秒
-DOWNLOAD_DELAY = 10
+DOWNLOAD_DELAY = 0
 DEFAULT_REQUEST_HEADERS = {
     'Accept':
     'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -15,8 +15,8 @@ DEFAULT_REQUEST_HEADERS = {
     'cookie': 'your cookie'
 }
 ITEM_PIPELINES = {
-    'weibo.pipelines.DuplicatesPipeline': 300,
-    'weibo.pipelines.CsvPipeline': 301,
+    'weibo.pipelines.DuplicatesPipeline': 5000,
+    'weibo.pipelines.CsvPipeline': 5001,
     # 'weibo.pipelines.MysqlPipeline': 302,
     # 'weibo.pipelines.MongoPipeline': 303,
     # 'weibo.pipelines.MyImagesPipeline': 304,
